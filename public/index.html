@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<link rel="stylesheet" href="/reset.css">
+		<link rel="icon" href="<%= BASE_URL %>favicon.ico">
+		<!-- <script type="text/javascript" src="//api.map.baidu.com/api?v=2.0&ak=zR4DVSqcWcZRAgT6rN1oUIS0utTQlQtg"></script> -->
+		<title>default</title>
+		<style>
+			:root {
+				--design-width: 1300;
+				--design-height: 800;
+				--login-left-bgi-url: url(/img/login/loginbgc.png);
+				--login-right-bgc-0: #999;
+				--login-right-bgc-100: #fff;
+				/* --login-right-bgc: linear-gradient(227deg, var(--login-right-bgc-0) 0%, var(--login-right-bgc-100) 100%); */
+				--login-right-box-shadow: rgba(255, 255, 255, 0.12);
+				--login-title-color-1: #000;
+				--login-title-color-2: #0091ff;
+				--login-title-color-sbu: #000;
+				--login-title-color-translate: #000;
+				--login-label: #000;
+				--login-input-holder: rgba(255, 255, 255, 0.5);
+				--login-btn: #fff;
+				--login-btn-bgc: #1f73e0;
+				--login-btn-shadow: 0 18px 18px 0 rgba(31, 115, 224, 0.33);
+				--global-bgc: #fff;
+				--font-color: rgba(0, 0, 0, 0.87);
+				--sidebar-opend: #fff;
+				--sidebar-menu: #fff;
+				--left-bgc: #fff;
+				--left-bgpic: url(/img/navibar/navibarbgc.png);
+				--switch-btn-bgc: black;
+				--top-header-bgc: #FFFFFF;
+				--top-main-bgc: #f0f0f0;
+				--head-statistics-col-bgc: #FFFFFF;
+				--top-bar-font: rgba(0, 0, 0, 0.87);
+				--cell-font: #FFFFFF;
+				--chart-box-left-item: #F3F3F3;
+				--kanban-list-title: #FFFFFF;
+				--kanban-list-label: #EBEBEB;
+				--kanban-list-item: #EBEBEB;
+				--kanban-list-item1: rgba(255, 255, 255, 0.8);
+				--monitor-broser-col: #27639C;
+				--monitor-text-col: #00EDFF;
+				--monitor-content-list-devices-item-box: #0A2F5F;
+				--monitor-content-list-bg: rgba(255, 255, 255, 0.13);
+				--tr-border: #ddd;
+				--main_map_icon: url(../img/home/home_map_light_icon.png) no-repeat;
+				--lang-selector-border: #DDDDDD;
+				--login-input-border: #DDDDDD;
+				--info-button-background: rgba(31, 115, 224, 1);
+				--info-button-background2: #909399;
+				--person-info-bg: rgba(255, 255, 255, 1);
+				--title-color: #333;
+				--dept-el-icon-arrow-down: rgba(91, 140, 255, 1);
+				--svg-icon-color: rgba(255, 255, 255, 0.6);
+				--app-containerbg: #0C3061;
+				--app-containerbg2: #0C3061;
+				--avue-main: url(/img/zhihui/bg.png) no-repeat;
+				--avue-container: #051533;
+				--hover-row: rgba(62, 130, 251, 0.55);
+				--page-dialog-content-bg: linear-gradient(180deg, rgba(5, 25, 63, 1) 0%, #0046AB 100%);
+				--form-model-title: #fff;
+				--submenu: #1760BE;
+				--submenu-text-color: #fff;
+				--el-submenu__icon-arrow-color: #fff;
+				--top-el-badge-img: url(/img/main-dark.png) no-repeat;
+				--equipment-monitoring-bg: url(/img/vehIcon/bgc.png) no-repeat;
+				--eq-broder-color: #F7B400;
+				--el-tabs-item-color: #fff;
+				--show-more: #1f69d0;
+				--left-container-bg: rgb(7, 58, 129);
+				--left-container-text: rgba(255, 255, 255, 0.8);
+				--dbdInspectionProject-border: 1px solid rgba(0, 144, 255, 0.6);
+				--dbdInspectionProject-background: rgba(0, 158, 255, 0.1);
+				--broder-col: #007FFF;
+				--broder-text-color: #fff;
+				--chart-box-left-color: #409eff;
+				--chart-bg: #FCF2DC;
+				--monitoring-title-bg: #e8f1fc;
+				--el-tree-bg: #245cbb;
+				--el-tree-color: #409eff;
+				--el-tree-color-hover: #051533;
+				--box-left-text: #fff;
+				--box-left-bg: #072F63;
+				--box-left-is-active: #44d7fc;
+				--box-left-is-hover-bg: rgba(24, 54, 99, 0.6);
+				--dbdInspectionTask-title: #c7bbbb;
+				--dbdInspectionTask-content: #fff;
+				--anti-collision-bg: linear-gradient(180deg, rgba(5, 25, 63, 0) 0%, #0046AB 100%);
+				--anti-collision-row-item-bg: url(/img/zhihui/bujian/bujianbeijing.png) no-repeat;
+				--command-job-bg: #0C4A86;
+				--command-job-title: #FFFFFF;
+				--command-job-value: #FFFFFF;
+				--el-menu-active-text-color: #FFFFFF;
+				--command-job-account-box: #0A2F5F;
+				--command-job-account-box-title: #fff;
+				--command-job-account-box-label: #fff;
+				--dash-data-overview-item-echart-long-bg: url(/img/zhihui/bg_item_1.png);
+				--dash-data-overview-item-echart-bg: url(/img/zhihui/bg_item.png);
+				--dash-echart-title-value-col: #FFFFFF;
+				--dash-radio-button-orig-radio-color: #fff;
+				--dash-radio-button-orig-radio-border-color: rgba(15, 207, 255, 0.35);
+				--dash-radio-button-orig-radio-background: rgba(25, 119, 243, 0.44);
+				--dash-el-radio-button-inner-background: rgba(25, 119, 243, 0.01);
+				--dash-el-radio-button-inner-col: #fff;
+				--dash-data-overview-item-top-item-bg: url(/img/zhihui/duobianxing.png);
+				--dash-data-overview-item-baojing-no-title-bg: url(/img/zhihui/item-title.png);
+				--dash-data-overview-item-top-item-value: #00F9FF;
+				--dash-data-overview-item-top-item-name: #00F9FF;
+				--dash-data-overview-item-baojing-no-bg: url(/img/zhihui/small_bg.png);
+				--dash-data-overview-item-baojing-no-box-value: rgba(45, 150, 231, 1);
+				--dash-data-overview-item-baojing-no-box-img: url(/img/zhihui/anquan.png);
+				--dash-data-top-box-title: rgba(255, 255, 255, 0.9);
+				--dash-data-top-box-content1: #00F9FF;
+				--dash-data-top-box-content2: #FF4444;
+				--dash-data-top-box-content3: #ced9da;
+				--dash-data-top-box-content4: #00ff75;
+				--dash-data-top-box-content5: #fffb00;
+				--detail-veh-detail-top-bg: rgba(8, 35, 96, 0.76);
+				--detail-veh-detail-top-bg1: rgba(8, 35, 96, 0.76);
+				--detail-veh-detail-top-shadow: #00d9ff;
+				--detail-veh-detail-top-shadow1: #00d9ff;
+				--detail-veh-detail-top-content-item-name1: #ddd;
+				--detail-veh-detail-top-content-item-name: #c7bbbb;
+				--detail-veh-detail-top-content-item-value: #fff;
+				--detail-el-tabs-item-color: #00d9ff;
+				--detail-el-tabs-item-isactive-color: #00d9ff;
+				--detail-current-card-veh-info-bg: rgba(19, 82, 162, 0.6);
+				--eventTimeLine-btn-class: rgba(0, 127, 255, 0.1);
+				--eventTimeLine-timeline-item-box: #0A2053;
+				--commandProjectAlarm-right-top-container-bg: linear-gradient(180deg, rgba(22, 139, 255, 0) 0%, rgba(102, 163, 255, 0.27) 100%);
+				--commandProjectAlarm-part-tag: #0FCFFF;
+				--commandProjectAlarm-part-tag-bg: rgba(0, 146, 211, 0.26);
+				--commandProjectAlarm-part-tag-success: #39FCC6;
+				--commandProjectAlarm-part-tag-success-bg: rgba(7, 191, 43, 0.12);
+				--commandProjectAlarm-part-tag-warning: #FFC835;
+				--commandProjectAlarm-part-tag-warning-bg: rgba(191, 176, 7, 0.12);
+				--commandProjectAlarm-part-tag-danger: #FF731E;
+				--commandProjectAlarm-part-tag-danger-bg: rgba(245, 70, 34, 0.16);
+				--commandProjectAlarm-part-tag-default: #00EDFF;
+				--commandProjectAlarm-part-tag-default-bg: rgba(7, 191, 191, 0.12);
+				--commandProjectAlarm-export-btn-bg: linear-gradient(270deg, #1277D6 0%, rgba(18, 119, 214, 0) 100%);
+				--commandProjectAlarm-export-btn-shadow: 0px 0px 17px 0px rgba(12, 37, 57, 0.5);
+				--device-minor-bg: #0A2F5F;
+				--monitor-content-list-devices-item-address: #ffffff;
+				--monitor-content-list-devices-item-address-sub: #ffffff;
+				--monitor-monitor-content-oper-broder: #27639C;
+				--monitor-monitor-content-oper-col: #00EDFF;
+				--current-card-struct: #0C3C86;
+				--current-status-right-item: #1B4C99;
+				--current-img-status-qizhongji-height-text: #0068D7;
+				--filing-bg: rgba(0, 21, 41, 0.12);
+				--current-text-title: #fff;
+				--current-col: #fa6400;
+				--current-project-status-num-col: #1f69d0;
+				--dbvideo-angel-zuoshang: url(/img/zhihui/zuoshang.png);
+				--dbvideo-item-angel-zuoxia: url(/img/zhihui/zuoxia.png);
+				--dbvideo-item-angel-youshang: url(/img/zhihui/youshang.png);
+				--dbvideo-item-angel-youxia: url(/img/zhihui/youxia.png);
+				--bigScreenWorking-bg: url(/img/bigScreenWorking/background1.png);
+				--big-box-left-bg: #113260;
+				--commandProjectTower-tab-container-active-border: #0fcfff;
+				--commandProjectTower-tag-container-color: #fff;
+				--commandProjectTower-tag-container-background: rgba(23, 139, 230, 0.3);
+				--map-bg: #1054A3;
+				--comprehensive-scheduling-info-map-top-img-bg: #004597;
+				--comprehensive-scheduling-info-map-top-img-box-shadow: 0px 0px 10px 0px rgba(3, 31, 70, 0.5);
+				--comprehensive-scheduling-info-map-title-color: #ffffff;
+				--comprehensive-scheduling-info-map-value-color: #ffffff;
+				--comprehensive-scheduling-info-map-vehicle-bg: #004597;
+				--comprehensive-scheduling-info-map-top-content-sub-name-bg: rgba(127, 255, 201, 0.21);
+				--comprehensive-scheduling-info-map-top-content-sub-name-color: #13ffe5;
+				--map-sub-text: #fff;
+				--dbdVideoSurveillance--bgc: #123A6F;
+				--dbdOutWarehouseBill-print-title: #fff;
+				--commandJobAccount-bgc: linear-gradient(180deg, rgba(0, 195, 255, 0) 0%, rgba(0, 144, 255, 0.28) 100%);
+				--billPrint-printTable-thead-bg: rgba(10, 33, 77, 0.5);
+				--billPrint-printTable-tbody-tr-odd: rgba(62, 152, 251, 0.15);
+				--billPrint-printTable-tbody-tr-even: rgba(62, 152, 251, 0);
+				--billPrint-inWarehouse-title-wrap-bg: #063E84;
+				--elDialogHeaderBottom: #1367CA;
+				--elDialogTitleBgc: #063E84;
+				--elDialogTableLine: #1367CA;
+				--projectInventorySubValue: #fff;
+				--projectInventorySubTitle: #fff;
+				--projectInventoryTitle: #fff;
+				--projectInventoryCaozuo: rgba(23, 139, 230, 0.15);
+				--projectInventoryCaozuoColor: #00EDFF;
+				--el-menuIsActive: rgba(18, 119, 214, 0.33);
+				--projectlistMapInputColor: #fff;
+				--projectlistMapInputBgc: #3A6B99;
+				--dbdProjectList-monitoring-info-bg: #123A6F;
+				--dbdProjectList-monitoring-info-border: 1px solid #0864AA;
+				--dbdProjectList-monitoring-info-box-shadow: 0px 0px 13px 0px #061634;
+				--dbdProjectList-monitoring-info-content-item-bottom: #FFFFFF;
+				--dbdProjectList-monitoring-info-alert-item-bg: rgba(18, 106, 214, 0.18);
+				--bigScreenWorkingLine: #1277D6;
+				--bigScreenWorkingLineActive: #00CBFF;
+				--projectDialogColor: #1d5fff;
+				--partDetailBgc: #0A2F5F;
+				--partDetailTimeBgc: rgba(23, 139, 230, 0.15);
+				--partDetailTimeColorActive: #00EDFF;
+				--partDetailTimeColor: #FFFFFF;
+				--partDetailTitleColor: #FFFFFF;
+				--partDetailValueColor: #FFFFFF;
+				--tableClickFontColor: #19FF8A;
+				--tableRouterFontColor: #00EDFF;
+				--tableDeleteFontColor: #FFB618;
+				--deitailImgLine: #0FFF79;
+				--cockpitJobAnalysisItemBgc: #0A2F5F;
+				--cockpitJobAnalysisFontColorShen: #FFFFFF;
+				--cockpitJobAnalysisFontColorQian: #FFFFFF;
+				--cockpitJobAnalysisFontJianBianshen: rgba(0, 195, 255, 0);
+				--cockpitJobAnalysisFontJianBianQian: rgba(0, 144, 255, 0.28);
+				--cockpitJobAnalysisMapTitleBgc: rgba(0, 0, 0, 0.3);
+			}
+		</style>
+	</head>
+	<body style="margin: 0px;">
+		<noscript>
+			<strong>We're sorry but default doesn't work properly without JavaScript enabled. Please enable it to
+				continue.</strong>
+		</noscript>
+		<div id="app"></div>
+		<!-- built files will be auto injected -->
+	</body>
+</html>
