@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>items</key>
+    <array>
+        <dict>
+            <key>assets</key>
+            <array>
+                <dict>
+                    <!-- ipa 文件下载地址（必须是 https 链接，iOS 要求 https） -->
+                    <key>kind</key>
+                    <string>software-package</string>
+                    <key>url</key>
+                    <string>https://tjaz.xcmg.com/upload/sysUpload/download/app/atzy-ios.ipa</string>
+                </dict>
+            </array>
+            <key>metadata</key>
+            <dict>
+                <!-- 应用 bundle-id（和 Xcode 里保持一致） -->
+                <key>bundle-identifier</key>
+                <string>com.xcmg.atzy</string>
+                <!-- 应用版本号 -->
+                <key>bundle-version</key>
+                <string>1.0.2</string>
+                <!-- 应用名字，安装时显示 -->
+                <key>title</key>
+                <string>安塔智云</string>
+            </dict>
+        </dict>
+    </array>
+</dict>
+</plist>
